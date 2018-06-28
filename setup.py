@@ -28,7 +28,7 @@ except ImportError:
 
 ext_modules = [
     Extension(
-        'simhash.simhash', ext_files,
+        'simhash_new.simhash', ext_files,
         language='c++',
         extra_compile_args=['-std=c++11'],
         include_dirs=['simhash/simhash-cpp/include']
@@ -36,7 +36,7 @@ ext_modules = [
 ]
 
 setup(
-    name='simhash-py',
+    name='simhash_new',
     version='0.4.0',
     description='Near-Duplicate Detection with Simhash',
     url='http://github.com/seomoz/simhash-py',
@@ -50,10 +50,10 @@ setup(
     ],
     ext_modules=ext_modules,
     packages=[
-        'simhash'
+        'simhash_new'
     ],
     package_dir={
-        'simhash': 'simhash'
+        'simhash_new': 'simhash'
     },
     tests_require=[
         'coverage',
